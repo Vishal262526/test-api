@@ -14,6 +14,8 @@ const getUser = (req,res) => {
         }
         
     ]
+
+    res.status(200).json(users);
 }
 
 module.exports = {getUser};
