@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req,res) => {
-    res.status(200).json({message:"Api is Running Successfully"});
-})
+
+const users = require("./routes/users");
+
+app.use("/user", users);
 
 
 app.listen(3001, (err) => {
